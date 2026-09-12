@@ -1,9 +1,11 @@
+# GitHub Actions 云端编译：把本仓库推到 GitHub 后，自动编译出 APK 供下载。
+# 免费额度足够个人使用，本地无需安装任何 Android 开发环境。
 name: Build APK
 
 on:
   push:
     branches: [ "main", "master" ]
-  workflow_dispatch:   # 支持在网页上手动触发
+  workflow_dispatch:   # 也支持在 GitHub 网页上手动触发
 
 permissions:
   contents: read
@@ -25,7 +27,9 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: 编译 Debug APK
-        run: ./gradlew assembleDebug
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - name: 上传 APK 产物
         uses: actions/upload-artifact@v4
