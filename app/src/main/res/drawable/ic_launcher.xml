@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WMC 遥控器应用图标：绿色圆形 + 白色遥控器造型 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 绿色圆底 -->
+    <path
+        android:fillColor="#2F8F3F"
+        android:pathData="M54,54m-54,0a54,54 0 1,1 108,0a54,54 0 1,1 -108,0" />
+
+    <!-- 遥控器机身 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,28h40a6,6 0 0 1 6,6v40a6,6 0 0 1 -6,6h-40a6,6 0 0 1 -6,-6v-40a6,6 0 0 1 6,-6z" />
+
+    <!-- 顶部红外发射窗 -->
+    <path
+        android:fillColor="#2F8F3F"
+        android:pathData="M48,31h12a3,3 0 0 1 0,6h-12a3,3 0 0 1 0,-6z" />
+
+    <!-- 显示屏 -->
+    <path
+        android:fillColor="#3A3E47"
+        android:pathData="M38,41h32a3,3 0 0 1 3,3v4a3,3 0 0 1 -3,3h-32a3,3 0 0 1 -3,-3v-4a3,3 0 0 1 3,-3z" />
+
+    <!-- 导航环 -->
+    <path
+        android:fillColor="#3A3E47"
+        android:pathData="M54,58m-11,0a11,11 0 1,1 22,0a11,11 0 1,1 -22,0" />
+
+    <!-- 导航中心 OK -->
+    <path
+        android:fillColor="#5CB24A"
+        android:pathData="M54,58m-5,0a5,5 0 1,1 10,0a5,5 0 1,1 -10,0" />
+
+    <!-- 底部两个按键 -->
+    <path
+        android:fillColor="#3A3E47"
+        android:pathData="M38,74h10a3,3 0 0 1 3,3v0a3,3 0 0 1 -3,3h-10a3,3 0 0 1 -3,-3v0a3,3 0 0 1 3,-3z" />
+
+    <path
+        android:fillColor="#3A3E47"
+        android:pathData="M60,74h10a3,3 0 0 1 3,3v0a3,3 0 0 1 -3,3h-10a3,3 0 0 1 -3,-3v0a3,3 0 0 1 3,-3z" />
+</vector>

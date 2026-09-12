@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Windows Media Center · RC-6 MCE · 36kHz · 厂商码 0x800F"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <!-- 状态栏 -->
+        <TextView
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_banner_ok"
+            android:padding="8dp"
+            android:text="红外发射器检测中…"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <!-- 电源 / MCE 键 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_power"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_red"
+                android:text="电源" />
+
+            <Button
+                android:id="@+id/btn_start"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_green"
+                android:text="● MCE" />
+        </LinearLayout>
+
+        <!-- DVD菜单 / 指南 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dvdmenu"
+                style="@style/RemoteBtn"
+                android:text="DVD菜单" />
+
+            <Button
+                android:id="@+id/btn_guide"
+                style="@style/RemoteBtn"
+                android:text="指南" />
+        </LinearLayout>
+
+        <!-- 信息 / 返回 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_info"
+                style="@style/RemoteBtn"
+                android:text="信息" />
+
+            <Button
+                android:id="@+id/btn_back"
+                style="@style/RemoteBtn"
+                android:text="返回" />
+        </LinearLayout>
+
+        <!-- LiveTV / 电视 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_livetv"
+                style="@style/RemoteBtn"
+                android:text="LiveTV" />
+
+            <Button
+                android:id="@+id/btn_tv"
+                style="@style/RemoteBtn"
+                android:text="电视" />
+        </LinearLayout>
+
+        <!-- 方向键区 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="导航" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_up"
+                style="@style/RemoteBtnSquare"
+                android:text="▲" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_left"
+                style="@style/RemoteBtnSquare"
+                android:text="◀" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="@style/RemoteBtnOk"
+                android:text="OK" />
+
+            <Button
+                android:id="@+id/btn_right"
+                style="@style/RemoteBtnSquare"
+                android:text="▶" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_down"
+                style="@style/RemoteBtnSquare"
+                android:text="▼" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- 音量 / 频道 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="音量 · 频道" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_vol_up"
+                style="@style/RemoteBtn"
+                android:text="音量+" />
+
+            <Button
+                android:id="@+id/btn_mute"
+                style="@style/RemoteBtn"
+                android:text="静音" />
+
+            <Button
+                android:id="@+id/btn_vol_down"
+                style="@style/RemoteBtn"
+                android:text="音量-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ch_up"
+                style="@style/RemoteBtn"
+                android:text="频道+" />
+
+            <Button
+                android:id="@+id/btn_ch_down"
+                style="@style/RemoteBtn"
+                android:text="频道-" />
+        </LinearLayout>
+
+        <!-- 播放控制 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="播放控制" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_prev"
+                style="@style/RemoteBtn"
+                android:text="上一曲" />
+
+            <Button
+                android:id="@+id/btn_rew"
+                style="@style/RemoteBtn"
+                android:text="快退" />
+
+            <Button
+                android:id="@+id/btn_play"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_green"
+                android:text="播放" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ff"
+                style="@style/RemoteBtn"
+                android:text="快进" />
+
+            <Button
+                android:id="@+id/btn_pause"
+                style="@style/RemoteBtn"
+                android:text="暂停" />
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/RemoteBtn"
+                android:text="下一曲" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_record"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_red"
+                android:text="● 录制" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                style="@style/RemoteBtn"
+                android:text="■ 停止" />
+
+            <Button
+                android:id="@+id/btn_eject"
+                style="@style/RemoteBtn"
+                android:text="弹出" />
+        </LinearLayout>
+
+        <!-- 彩色键 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="彩色键" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_red"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_red"
+                android:text="A" />
+
+            <Button
+                android:id="@+id/btn_green"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_green"
+                android:text="B" />
+
+            <Button
+                android:id="@+id/btn_yellow"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_yellow"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/btn_blue"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_blue"
+                android:text="D" />
+        </LinearLayout>
+
+        <!-- 数字键 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="数字键" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_1" style="@style/RemoteBtn" android:text="1" />
+            <Button android:id="@+id/btn_2" style="@style/RemoteBtn" android:text="2" />
+            <Button android:id="@+id/btn_3" style="@style/RemoteBtn" android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_4" style="@style/RemoteBtn" android:text="4" />
+            <Button android:id="@+id/btn_5" style="@style/RemoteBtn" android:text="5" />
+            <Button android:id="@+id/btn_6" style="@style/RemoteBtn" android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_7" style="@style/RemoteBtn" android:text="7" />
+            <Button android:id="@+id/btn_8" style="@style/RemoteBtn" android:text="8" />
+            <Button android:id="@+id/btn_9" style="@style/RemoteBtn" android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_star" style="@style/RemoteBtn" android:text="*" />
+            <Button android:id="@+id/btn_0" style="@style/RemoteBtn" android:text="0" />
+            <Button android:id="@+id/btn_pound" style="@style/RemoteBtn" android:text="#" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/RemoteBtn"
+                android:text="清除" />
+
+            <Button
+                android:id="@+id/btn_enter"
+                style="@style/RemoteBtn"
+                android:background="@drawable/bg_btn_green"
+                android:text="确认" />
+        </LinearLayout>
+
+        <!-- 媒体快捷方式 -->
+        <TextView
+            style="@style/SectionLabel"
+            android:text="媒体快捷方式" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_mytv" style="@style/RemoteBtn" android:text="我的电视" />
+            <Button android:id="@+id/btn_pictures" style="@style/RemoteBtn" android:text="图片" />
+            <Button android:id="@+id/btn_music" style="@style/RemoteBtn" android:text="我的音乐" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_videos" style="@style/RemoteBtn" android:text="视频" />
+            <Button android:id="@+id/btn_recordedtv" style="@style/RemoteBtn" android:text="录制电视" />
+            <Button android:id="@+id/btn_radio" style="@style/RemoteBtn" android:text="广播" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_zoom" style="@style/RemoteBtn" android:text="画面比例" />
+            <Button android:id="@+id/btn_caption" style="@style/RemoteBtn" android:text="字幕" />
+            <Button android:id="@+id/btn_more" style="@style/RemoteBtn" android:text="更多程序" />
+        </LinearLayout>
+
+        <!-- 底部说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_banner_ok"
+            android:text="@string/footer_note"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WMC 遥控器</string>
+    <string name="footer_note">本应用输出标准 Windows Media Center 遥控器红外信号（RC-6 MCE，36kHz，厂商码 0x800F），
+需要手机带红外发射头，并配合支持 MCE 的红外接收器（如 eHome 红外收发器、HP USB 红外接收器、
+Kodi/MythTV 机顶盒的红外接收等）使用。长按 音量/频道/方向/快退快进 可连续发射。</string>
+</resources>
